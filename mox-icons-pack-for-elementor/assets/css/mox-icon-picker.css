@@ -1,0 +1,31 @@
+/**
+ * Elementor icon picker adjustments for Mox Icons.
+ *
+ * @package MoxIcon
+ */
+
+.elementor-icons-manager__tab-link i {
+	align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	margin-inline-end: 15px;
+	padding-inline-end: 0;
+	vertical-align: middle;
+	width: 20px;
+}
+
+.elementor-icons-manager__tab-link i:before {
+	text-align: center;
+	width: 20px;
+}
+
+/*
+ * Repeater row titles (e.g. Icon List "Items" in the Content tab) can be flex
+ * containers. Mox mask icons render as an empty <i> sized in em units, so with a
+ * long item label the flex layout shrinks that empty icon to zero width and it
+ * disappears. Keep the icon (and any inline SVG) from collapsing.
+ */
+.elementor-repeater-row-item-title i,
+.elementor-repeater-row-item-title svg {
+	flex-shrink: 0;
+}

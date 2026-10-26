@@ -1,0 +1,451 @@
+/* ==========================================================================
+   MoxIcon Admin Styles
+   ========================================================================== */
+
+:root {
+	--mox-primary: #6c63ff;
+	--mox-primary-dark: #5a52d5;
+	/* #6c63ff on white is 4.32:1 and fails WCAG AA; use this for text and links. */
+	--mox-primary-text: #5a52d5;
+	--mox-success: #22c55e;
+	--mox-danger: #ef4444;
+	--mox-bg: #f8f9fc;
+	--mox-surface: #ffffff;
+	--mox-border: #e5e7eb;
+	--mox-text: #111827;
+	--mox-text-muted: #5c6470;
+	--mox-radius: 12px;
+	--mox-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.04);
+	--mox-shadow-md: 0 4px 20px rgba(108,99,255,.12);
+}
+
+/* Wrap */
+.moxicon-wrap {
+	max-width: 1100px;
+	margin: 24px 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header */
+.moxicon-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--mox-surface);
+	border: 1px solid var(--mox-border);
+	border-radius: var(--mox-radius);
+	padding: 24px 28px;
+	margin-bottom: 20px;
+	box-shadow: var(--mox-shadow);
+}
+
+.moxicon-header__logo {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.moxicon-header__brand-icon {
+	display: block;
+	width: 48px;
+	height: 55px;
+	max-width: 48px;
+	max-height: 55px;
+	flex: 0 0 48px;
+	object-fit: contain;
+}
+
+.moxicon-header__logo h1 {
+	margin: 0;
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--mox-text);
+	line-height: 1.2;
+}
+
+.moxicon-header__logo p {
+	margin: 2px 0 0;
+	font-size: 13px;
+	color: var(--mox-text-muted);
+}
+
+.moxicon-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px 12px;
+	background: linear-gradient(135deg, #ede9fe, #dbeafe);
+	color: var(--mox-primary-text);
+	font-size: 12px;
+	font-weight: 600;
+	border-radius: 999px;
+}
+
+/* Notices */
+.moxicon-notice {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 14px 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.moxicon-notice--success {
+	background: #f0fdf4;
+	border: 1px solid #bbf7d0;
+	color: #166534;
+}
+
+/* Section */
+.moxicon-section {
+	background: var(--mox-surface);
+	border: 1px solid var(--mox-border);
+	border-radius: var(--mox-radius);
+	padding: 28px;
+	margin-bottom: 20px;
+	box-shadow: var(--mox-shadow);
+}
+
+.moxicon-section__title {
+	margin: 0 0 6px;
+	font-size: 16px;
+	font-weight: 700;
+	color: var(--mox-text);
+}
+
+.moxicon-section__desc {
+	margin: 0 0 24px;
+	font-size: 13px;
+	color: var(--mox-text-muted);
+}
+
+/* Library Cards */
+.moxicon-libraries {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.moxicon-library-card {
+	border: 1px solid var(--mox-border);
+	border-radius: 10px;
+	padding: 18px 20px;
+	transition: border-color .2s, box-shadow .2s;
+	background: var(--mox-bg);
+}
+
+.moxicon-library-card.is-active {
+	border-color: var(--mox-primary);
+	background: #faf9ff;
+	box-shadow: var(--mox-shadow-md);
+}
+
+.moxicon-library-card__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.moxicon-library-card__info h3 {
+	margin: 0 0 4px;
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--mox-text);
+}
+
+.moxicon-library-card__info p {
+	margin: 0;
+	font-size: 13px;
+	color: var(--mox-text-muted);
+	line-height: 1.5;
+}
+
+.moxicon-library-card__meta {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 14px;
+}
+
+/* Tags */
+.moxicon-tag {
+	display: inline-flex;
+	align-items: center;
+	padding: 3px 10px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .3px;
+}
+
+.moxicon-tag--count {
+	background: #eff6ff;
+	color: #1d4ed8;
+}
+
+.moxicon-tag--license {
+	background: #f0fdf4;
+	color: #166534;
+}
+
+.moxicon-tag--active {
+	background: #dcfce7;
+	color: #15803d;
+}
+
+.moxicon-tag--inactive {
+	background: #f3f4f6;
+	color: #4b5563;
+}
+
+/* Toggle Switch */
+.moxicon-toggle {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+.moxicon-toggle input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
+.moxicon-toggle__slider {
+	position: relative;
+	width: 48px;
+	height: 26px;
+	background: #d1d5db;
+	border-radius: 999px;
+	transition: background .2s;
+}
+
+.moxicon-toggle__slider::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 3px;
+	top: 3px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 1px 4px rgba(0,0,0,.25);
+	transition: transform .2s;
+}
+
+.moxicon-toggle input:checked + .moxicon-toggle__slider {
+	background: var(--mox-primary);
+}
+
+.moxicon-toggle input:checked + .moxicon-toggle__slider::before {
+	transform: translateX(22px);
+}
+
+.moxicon-toggle input:focus-visible + .moxicon-toggle__slider {
+	outline: 2px solid var(--mox-primary);
+	outline-offset: 2px;
+}
+
+/* Footer */
+.moxicon-footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.moxicon-footer .button-primary {
+	background: var(--mox-primary) !important;
+	border-color: var(--mox-primary-dark) !important;
+	padding: 8px 24px !important;
+	height: auto !important;
+	font-size: 14px !important;
+	border-radius: 8px !important;
+	box-shadow: 0 2px 8px rgba(108,99,255,.3) !important;
+	transition: opacity .2s !important;
+}
+
+.moxicon-footer .button-primary:hover {
+	opacity: .88 !important;
+}
+
+/* Tabs Navigation */
+.moxicon-tabs-nav {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid var(--mox-border);
+	padding-bottom: 0;
+}
+
+.moxicon-tab-btn {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid transparent;
+	padding: 12px 20px;
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--mox-text-muted);
+	cursor: pointer;
+	transition: all .2s;
+	margin-bottom: -1px;
+}
+
+.moxicon-tab-btn:hover {
+	color: var(--mox-primary-text);
+	background: #f3f4f6;
+	border-radius: 8px 8px 0 0;
+}
+
+.moxicon-tab-btn.is-active {
+	color: var(--mox-primary-text);
+	border-bottom-color: var(--mox-primary);
+}
+
+.moxicon-tab-btn:focus-visible {
+	outline: 2px solid var(--mox-primary-text);
+	outline-offset: -2px;
+	border-radius: 8px 8px 0 0;
+}
+
+/* Tab Content */
+.moxicon-tab-pane {
+	display: none;
+	animation: fadeIn .3s;
+}
+
+.moxicon-tab-pane.is-active {
+	display: block;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(5px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* Table */
+.moxicon-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 16px;
+	background: var(--mox-surface);
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.moxicon-table th,
+.moxicon-table td {
+	padding: 14px 16px;
+	text-align: left;
+	border-bottom: 1px solid var(--mox-border);
+	font-size: 14px;
+}
+
+.moxicon-table th {
+	background: #f9fafb;
+	font-weight: 600;
+	color: var(--mox-text);
+}
+
+.moxicon-table td {
+	color: var(--mox-text-muted);
+}
+
+.moxicon-table tr:last-child td {
+	border-bottom: none;
+}
+
+.moxicon-table a {
+	color: var(--mox-primary-text);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.moxicon-table a:hover {
+	text-decoration: underline;
+}
+
+/* Changelog */
+.moxicon-changelog {
+	margin-top: 16px;
+}
+
+.moxicon-changelog__item {
+	padding-left: 16px;
+	border-left: 1px solid var(--mox-border);
+	margin-bottom: 24px;
+}
+
+.moxicon-changelog__version {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.moxicon-changelog__date {
+	font-size: 13px;
+	color: var(--mox-text-muted);
+}
+
+.moxicon-changelog__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.moxicon-changelog__list li {
+	position: relative;
+	padding-left: 16px;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: var(--mox-text-muted);
+}
+
+.moxicon-changelog__list li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 8px;
+	width: 6px;
+	height: 6px;
+	background: var(--mox-primary);
+	border-radius: 50%;
+}
+
+.moxicon-changelog__list strong {
+	color: var(--mox-text);
+	margin-right: 4px;
+}
+
+@media (max-width: 782px) {
+	.moxicon-wrap {
+		max-width: none;
+		margin-right: 12px;
+	}
+
+	.moxicon-libraries {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Respect the operating system's reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+	.moxicon-tab-pane {
+		animation: none;
+	}
+
+	.moxicon-library-card,
+	.moxicon-tab-btn,
+	.moxicon-toggle__slider,
+	.moxicon-toggle__slider::before,
+	.moxicon-footer .button-primary {
+		transition: none !important;
+	}
+}
